@@ -1,0 +1,25 @@
+version: 2
+models:
+  - name: stg_daily_sales
+    description: "Staging penjualan harian."
+    columns:
+      - name: order_date
+        tests: [not_null, unique]
+      - name: total_sales
+        tests: [not_null]
+  - name: stg_top_products
+    columns:
+      - name: product_line
+        tests: [not_null, unique]
+  - name: stg_avg_rating
+    columns:
+      - name: product_line
+        tests: [not_null, unique]
+  - name: stg_sales_by_branch
+    columns:
+      - name: branch
+        tests: [not_null, unique]
+  - name: stg_sales_by_payment
+    columns:
+      - name: payment
+        tests: [not_null, unique]

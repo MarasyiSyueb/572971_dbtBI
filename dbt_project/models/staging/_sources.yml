@@ -1,0 +1,16 @@
+version: 2
+sources:
+  - name: raw
+    description: "Hasil output pipeline tugas Airflow dimasukkan ke DuckDB schema raw."
+    schema: raw
+    tables:
+      - name: daily_sales
+        description: "Total penjualan per hari."
+      - name: top_products
+        description: "Total terjual per tipe produk."
+      - name: sales_by_branch
+        description: "Total penjualan per cabang."
+      - name: sales_by_payment
+        description: "Total penjualan per tipe pembayaran."
+      - name: avg_rating_by_product
+        description: "Rata-rata rating per tipe produk."

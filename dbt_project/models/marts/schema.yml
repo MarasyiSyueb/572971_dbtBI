@@ -1,0 +1,30 @@
+version: 2
+models:
+  - name: mart_product_performance
+    description: "Gabungan kuantitas terjual + rata-rata rating per lini produk."
+    columns:
+      - name: product_line
+        tests: [not_null, unique]
+      - name: total_quantity
+        tests: [not_null]
+  - name: mart_daily_sales
+    description: "Penjualan harian untuk dashboard tren waktu."
+    columns:
+      - name: order_date
+        tests: [not_null, unique]
+      - name: total_sales
+        tests: [not_null]
+  - name: mart_sales_by_branch
+    description: "Total penjualan per cabang untuk dashboard."
+    columns:
+      - name: branch
+        tests: [not_null, unique]
+      - name: total_sales
+        tests: [not_null]
+  - name: mart_sales_by_payment
+    description: "Total penjualan per metode pembayaran untuk dashboard."
+    columns:
+      - name: payment
+        tests: [not_null, unique]
+      - name: total_sales
+        tests: [not_null]
